@@ -1,0 +1,455 @@
+.api-key-manager {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.api-key-manager:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Header */
+.akm-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.akm-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.akm-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.akm-title h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.akm-desc {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Input Section */
+.akm-input-section {
+  margin-bottom: 20px;
+}
+
+.akm-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.akm-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.akm-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.akm-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.akm-input::placeholder {
+  color: #999;
+}
+
+.akm-btn-icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.akm-btn-icon:hover:not(:disabled) {
+  border-color: #4f46e5;
+  background: #f0f4ff;
+}
+
+.akm-btn-icon:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Instructions */
+.akm-instructions {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-left: 4px solid #4f46e5;
+}
+
+.akm-instructions-header {
+  margin-bottom: 12px;
+}
+
+.akm-instructions-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.akm-instructions-list {
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style: none;
+  counter-reset: step-counter;
+}
+
+.akm-instructions-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.akm-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.akm-step-text {
+  flex: 1;
+}
+
+/* Info Grid */
+.akm-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.akm-info-card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.akm-info-card h5 {
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.akm-info-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Quick Links */
+.akm-quick-link {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.akm-link-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px 16px;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  background: white;
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.akm-link-btn:hover {
+  background: #4f46e5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.akm-link-secondary {
+  border-color: #999;
+  color: #666;
+}
+
+.akm-link-secondary:hover {
+  background: #666;
+  border-color: #666;
+  color: white;
+}
+
+/* Action Buttons */
+.akm-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.akm-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.akm-btn-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.akm-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+.akm-btn-primary.success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.akm-btn-secondary {
+  background: white;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+
+.akm-btn-secondary:hover:not(:disabled) {
+  background: #f0f4ff;
+}
+
+.akm-btn-secondary.loading {
+  opacity: 0.7;
+}
+
+.akm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Status Message */
+.akm-status-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  animation: slideIn 0.3s ease;
+}
+
+.akm-status-success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.akm-status-error {
+  background: #fee2e2;
+  color: #7f1d1d;
+  border: 1px solid #fca5a5;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Warning */
+.akm-warning {
+  padding: 12px 16px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .api-key-manager {
+    padding: 16px;
+  }
+
+  .akm-title {
+    gap: 12px;
+  }
+
+  .akm-icon {
+    font-size: 24px;
+  }
+
+  .akm-title h3 {
+    font-size: 16px;
+  }
+
+  .akm-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .akm-quick-link {
+    flex-direction: column;
+  }
+
+  .akm-link-btn {
+    min-width: unset;
+  }
+
+  .akm-actions {
+    flex-direction: column;
+  }
+
+  .akm-input-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .api-key-manager {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  }
+
+  .akm-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .akm-title h3 {
+    color: #e5e7eb;
+  }
+
+  .akm-desc {
+    color: #9ca3af;
+  }
+
+  .akm-label {
+    color: #d1d5db;
+  }
+
+  .akm-input {
+    background: #374151;
+    border-color: #4b5563;
+    color: #e5e7eb;
+  }
+
+  .akm-input:focus {
+    border-color: #818cf8;
+  }
+
+  .akm-btn-icon {
+    background: #374151;
+    border-color: #4b5563;
+    color: #d1d5db;
+  }
+
+  .akm-btn-icon:hover {
+    background: #4b5563;
+  }
+
+  .akm-instructions {
+    background: #1f2937;
+    border-left-color: #818cf8;
+  }
+
+  .akm-instructions-header h4 {
+    color: #e5e7eb;
+  }
+
+  .akm-step-text {
+    color: #d1d5db;
+  }
+
+  .akm-info-card {
+    background: #2d3748;
+    border-color: #4b5563;
+  }
+
+  .akm-info-card h5,
+  .akm-info-card p {
+    color: #e5e7eb;
+  }
+
+  .akm-link-btn {
+    background: #1f2937;
+  }
+
+  .akm-btn-secondary {
+    background: #374151;
+  }
+
+  .akm-warning {
+    background: #78350f;
+    border-color: #b45309;
+    color: #fef3c7;
+  }
+}
